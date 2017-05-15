@@ -177,6 +177,10 @@ header {
 
 textarea {
 	height: 234px;
+
+	@include respond-to( 1024px ) {
+		height: 241px;
+	}
 }
 
 
@@ -185,14 +189,14 @@ input[type=submit], button, .btn {
 	@include clearfix;
 	@include font-title;
 	display: block;
-	margin: 20px auto;
+	margin: 15px auto;
 	padding: 10px 35px;
 	background-color: $red;
 	color: white;
 	border: 0;
 	border-radius: 10px;
-	font-size: 1.2em;
-	line-height: 1.5em;
+	font-size: 1em;
+	line-height: 1.4em;
 	text-transform: uppercase;
 	cursor: pointer;
 	text-align: center;
@@ -200,9 +204,7 @@ input[type=submit], button, .btn {
 	box-shadow: 3px 3px 25px lighten( $grey, 35% );
 
 	@include respond-to( 768px ) {
-		font-size: 2.4em;
-		max-width: 40%;
-		margin: 30px auto;
+		font-size: 1.8em;
 	}
 
 	span {
