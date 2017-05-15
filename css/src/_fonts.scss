@@ -1,0 +1,49 @@
+
+// include our fonts
+@import url('https://fonts.googleapis.com/css?family=Slabo+13px');
+
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('fonts/gotham-book.eot');
+    src: url('fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gotham-book.woff2') format('woff2'),
+         url('fonts/gotham-book.woff') format('woff'),
+         url('fonts/gotham-book.ttf') format('truetype'),
+         url('fonts/gotham-book.svg#gotham_bookregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// sans-serif mixin
+@mixin font-title {
+    font-family: "Gotham Book", sans-serif;
+    font-weight: 400;
+}
+
+
+// sans-serif mixin
+@mixin font-title-light {
+    font-family: "Gotham Book", sans-serif;
+    font-weight: 300;
+}
+
+
+// sans-serif mixin
+@mixin font {
+	font-family: "Gotham Book", sans-serif;
+	font-weight: 400;
+}
+
+
+// bold face
+@mixin font-bold {
+	font-weight: 700;
+}
+
+
+@mixin font-slab {
+    font-family: "Slabo 13px", serif;
+    letter-spacing: -1px;
+}

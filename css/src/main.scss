@@ -1,0 +1,246 @@
+
+
+// color variables
+$grey: #414042;
+$teal: #20c8f4;
+$green: #79B943;
+$red: #BD2037;
+
+
+@import "reset";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "base";
+
+@import "grid";
+
+
+
+// background-container
+.container {
+	background: white;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+
+// header styles
+header {
+	@include clearfix;
+	padding: 10px 20px;
+
+	img {
+		display: block;
+		margin: 10px auto;
+	}
+	
+	@include respond-to( 600px ) {	
+		padding: 20px 30px;
+
+		img {
+			margin: 0;
+		}
+
+		.logo {
+			float: left;
+		}
+
+		.phone {
+			float: right;
+		}
+	}
+}
+
+
+// wrap div
+.wrap {
+	max-width: 1100px;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix;
+}
+
+
+
+// intro font size
+.intro {
+	font-size: 1.4em;
+	line-height: 1.6em;
+	padding: 20px;
+	@include font-slab;
+	color: lighten( $grey, 20% );
+	text-align: center;
+
+	h2 {
+		color: $red;
+	}
+
+	p {
+		padding: 10px 0;
+
+		@include respond-to( 768px ) {
+			padding: 20px 0;
+		}
+	}
+
+	@include respond-to( 768px ) {
+		font-size: 1.6em;
+	}
+
+	@include respond-to( 1024px ) {
+		font-size:  1.8em;
+	}
+}
+
+
+
+// colors
+.bg-grey { background: $grey; color: white; }
+.bg-teal { background: $teal; color: white; }
+.bg-green { background: $green; color: white; }
+.bg-red { background: $red; color: white; }
+
+
+
+// style the thermometer a bit.
+.savings-thermometer {
+	margin: 0 auto;
+
+	@include respond-to( 600px ) {
+		margin: 0 0 10px 20px;
+		float: right;
+	}
+}
+
+
+
+// tool styles
+.contact-form {
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 30px;
+	}
+}
+
+
+
+// results styles
+.results {
+	display: none;
+	text-align: center;
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 30px;
+	}
+
+	// large title
+	h2 {
+		@include font;
+		font-size: 1.8em;
+		line-height: 1.5em;
+
+		@include respond-to( 768px ) {
+			font-size: 3em;
+			padding: 10px 20px;
+		}
+	}
+
+	p {
+		font-size: 1.2em;
+		line-height: 1.5em;
+
+		strong {
+			font-size: 1.4em;
+		}
+
+		&.larger {
+			font-size: 1.4em;
+		}
+	}
+}
+
+
+textarea {
+	height: 234px;
+}
+
+
+// button styles
+input[type=submit], button, .btn {
+	@include clearfix;
+	@include font-title;
+	display: block;
+	margin: 20px auto;
+	padding: 10px 35px;
+	background-color: $red;
+	color: white;
+	border: 0;
+	border-radius: 10px;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	box-shadow: 3px 3px 25px lighten( $grey, 35% );
+
+	@include respond-to( 768px ) {
+		font-size: 2.4em;
+		max-width: 40%;
+		margin: 30px auto;
+	}
+
+	span {
+		display: block;
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		width: 30px;
+		height: 30px;
+		margin-top: -15px;
+	}
+
+	&:hover {
+		opacity: .9;
+		color: white;
+	}
+
+	&.go-back {
+		background-color: lighten( $grey, 20% );
+		font-size: 1.5em;
+		color: white;
+	}
+
+	&.calculate, &.apply {
+		background-color: $teal;
+	}
+}
+
+
+.buttons {
+	padding: 0 20px;
+}
+
+
+.fine-print {
+	padding: 20px;
+	font-size: .85em;
+	line-height: 1.3em;
+	text-align: left;
+	color: lighten( $grey, 30% );
+
+	img {
+		float: right;
+		margin: 0 0 15px 15px;
+	}
+}
+
