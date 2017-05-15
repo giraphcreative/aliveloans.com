@@ -34,7 +34,7 @@ header {
 
 	img {
 		display: block;
-		margin: 10px auto;
+		margin: 20px auto;
 	}
 	
 	@include respond-to( 600px ) {	
@@ -74,8 +74,12 @@ header {
 	color: lighten( $grey, 20% );
 	text-align: center;
 
-	h2 {
+	h2, h4 {
 		color: $red;
+	}
+
+	h3 {
+		color: darken( $grey, 5% );
 	}
 
 	p {
@@ -87,7 +91,12 @@ header {
 	}
 
 	@include respond-to( 768px ) {
+		padding: 20px 50px;
 		font-size: 1.6em;
+
+		span {
+			display: block;
+		}
 	}
 
 	@include respond-to( 1024px ) {
