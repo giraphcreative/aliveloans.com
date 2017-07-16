@@ -204,7 +204,9 @@ input[type=submit], button, .btn {
 	box-shadow: 3px 3px 25px lighten( $grey, 35% );
 
 	@include respond-to( 768px ) {
-		font-size: 1.8em;
+		font-size: 1.4em;
+		max-width: 50%;
+		margin: 0 auto;
 	}
 
 	span {
