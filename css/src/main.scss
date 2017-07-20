@@ -204,9 +204,10 @@ input[type=submit], button, .btn {
 	box-shadow: 3px 3px 25px lighten( $grey, 35% );
 
 	@include respond-to( 768px ) {
+		display: inline-block;
 		font-size: 1.4em;
-		max-width: 50%;
-		margin: 0 auto;
+		width: 40%;
+		margin: 10px auto;
 	}
 
 	span {
@@ -235,6 +236,10 @@ input[type=submit], button, .btn {
 	}
 
 	&.calculate, &.apply {
+		background-color: $teal;
+	}
+
+	&.learn {
 		background-color: $teal;
 	}
 }
