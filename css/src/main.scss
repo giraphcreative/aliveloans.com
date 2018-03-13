@@ -73,10 +73,13 @@ header {
 	padding: 20px;
 	@include font-slab;
 	color: lighten( $grey, 20% );
-	text-align: center;
 
 	h2, h4 {
 		color: $red;
+	}
+
+	h4 {
+		padding: 40px 0 0;
 	}
 
 	h3 {
@@ -89,6 +92,11 @@ header {
 		@include respond-to( 768px ) {
 			padding: 20px 0;
 		}
+	}
+
+	ul {
+		list-style: disc;
+		padding-left: 40px;
 	}
 
 	@include respond-to( 768px ) {
